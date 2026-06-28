@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ArrowLeft, User, Mail, School, Phone, CheckSquare, Sparkles } from 'lucide-react';
 import { toast } from 'react-toastify';
+import jnctLogoWhite from '../assets/jnct-logo-white.png';
+import ecellLogoOnly from '../assets/jnct-ecell-logo-only.png';
 
 export default function Register({ onNavigate }) {
   const [formData, setFormData] = useState({
@@ -105,6 +107,13 @@ export default function Register({ onNavigate }) {
 
         <div className="bg-bg-card border border-border-color rounded-2xl p-6 sm:p-10 shadow-2xl shadow-black/45 relative">
           <div className="text-center mb-8">
+            {/* Logos on registration form */}
+            <div className="flex justify-center items-center gap-4 mb-4 bg-white/2 border border-white/5 p-3.5 rounded-xl max-w-max mx-auto">
+              <img src={jnctLogoWhite} alt="JNCT Logo" className="h-8 w-auto object-contain" />
+              <div className="h-6 w-[1px] bg-border-color"></div>
+              <img src={ecellLogoOnly} alt="JNCT E-Cell Logo" className="h-8 w-auto object-contain" />
+            </div>
+
             <div className="inline-flex items-center gap-1.5 bg-secondary/8 border border-secondary/20 text-secondary px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-4">
               <Sparkles size={14} className="animate-pulse-sparkle text-secondary" />
               <span>E-Summit '26 Registration</span>
@@ -163,7 +172,7 @@ export default function Register({ onNavigate }) {
                   type="text" 
                   id="college"
                   name="college"
-                  placeholder="IIT BHU / BITS Pilani" 
+                  placeholder="Jai Narain College of Technology (JNCT)" 
                   value={formData.college}
                   onChange={handleInputChange}
                   className={`w-full bg-white/2 border rounded-lg py-3 pl-11 pr-4 text-text-primary text-sm transition-all duration-300 focus:outline-none focus:border-primary focus:bg-white/4 focus:shadow-md focus:shadow-primary/15 ${

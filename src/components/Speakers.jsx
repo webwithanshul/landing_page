@@ -1,4 +1,3 @@
-import React from 'react';
 import { LinkedinIcon, TwitterIcon } from './SocialIcons';
 
 export default function Speakers() {

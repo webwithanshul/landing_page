@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import ecellLogoOnly from '../assets/jnct-ecell-logo-only.png';
 
 export default function Navbar({ currentView, onNavigate }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,11 +46,14 @@ export default function Navbar({ currentView, onNavigate }) {
       <div className="flex justify-between items-center max-w-6xl mx-auto px-6">
         <a 
           href="#hero" 
-          className="font-heading font-extrabold text-2xl text-text-primary tracking-tight"
+          className="flex items-center gap-3 font-heading font-extrabold text-2xl text-text-primary tracking-tight"
           onClick={(e) => handleLinkClick(e, 'hero')}
         >
-          <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">E</span>
-          -Summit <span className="text-secondary">'26</span>
+          <img src={ecellLogoOnly} alt="JNCT E-Cell Logo" className="h-9 w-auto object-contain" />
+          <span>
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">E</span>
+            -Summit <span className="text-secondary">'26</span>
+          </span>
         </a>
 
         {/* Desktop Menu */}

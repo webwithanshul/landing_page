@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Sparkles } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons';
 import { toast } from 'react-toastify';
+import jnctLogoWhite from '../assets/jnct-logo-white.png';
+import ecellLogoOnly from '../assets/jnct-ecell-logo-only.png';
 
 export default function Contact() {
   const [email, setEmail] = useState('');
@@ -25,7 +27,13 @@ export default function Contact() {
           
           {/* Brand Column */}
           <div className="flex flex-col items-start">
-            <a href="#hero" className="font-heading font-extrabold text-2xl text-text-primary mb-4 block">
+            <div className="flex items-center gap-3 mb-4">
+              <img src={jnctLogoWhite} alt="JNCT Bhopal Logo" className="h-9 w-auto object-contain" />
+              <div className="h-6 w-[1px] bg-border-color"></div>
+              <img src={ecellLogoOnly} alt="JNCT E-Cell Logo" className="h-9 w-auto object-contain" />
+            </div>
+            
+            <a href="#hero" className="font-heading font-extrabold text-xl text-text-primary mb-3 block">
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">E</span>
               -Summit <span className="text-secondary">'26</span>
             </a>
@@ -56,7 +64,7 @@ export default function Contact() {
             <ul className="list-none flex flex-col gap-4">
               <li className="flex gap-3 text-sm text-text-secondary leading-relaxed">
                 <Mail size={16} className="text-primary shrink-0 mt-0.5" />
-                <a href="mailto:esummit@ecell.org" className="hover:text-primary transition-colors">esummit@ecell.org</a>
+                <a href="mailto:ecell@jnctbhopal.ac.in" className="hover:text-primary transition-colors">ecell@jnctbhopal.ac.in</a>
               </li>
               <li className="flex gap-3 text-sm text-text-secondary leading-relaxed">
                 <Phone size={16} className="text-primary shrink-0 mt-0.5" />
@@ -65,8 +73,9 @@ export default function Contact() {
               <li className="flex gap-3 text-sm text-text-secondary leading-relaxed">
                 <MapPin size={16} className="text-primary shrink-0 mt-0.5" />
                 <span>
-                  Innovation Campus, Sector-62,<br />
-                  New Delhi, India
+                  Jai Narain College of Technology,<br />
+                  New Bhanpur Bridge Road,<br />
+                  Bhopal, Madhya Pradesh, India
                 </span>
               </li>
             </ul>
@@ -97,7 +106,7 @@ export default function Contact() {
         <div className="mt-10 border-t border-border-color pt-6">
           <div className="flex justify-between items-center flex-wrap gap-4 max-w-6xl mx-auto px-6">
             <p className="text-xs text-text-muted">
-              © {new Date().getFullYear()} E-Cell. All rights reserved. Designed for E-Summit '26.
+              © {new Date().getFullYear()} JNCT E-Cell. All rights reserved. Designed for E-Summit '26.
             </p>
             <p className="text-xs text-text-muted flex items-center gap-1.5">
               <Sparkles size={14} className="text-secondary" /> Made by Web & Technical Team

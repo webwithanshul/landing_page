@@ -1,4 +1,3 @@
-import React from 'react';
 import { Cpu, Coins, Briefcase, Rocket } from 'lucide-react';
 
 export default function Highlights({ onNavigate }) {

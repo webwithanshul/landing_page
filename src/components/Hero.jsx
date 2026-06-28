@@ -1,6 +1,6 @@
-import React from 'react';
 import { ArrowRight, Calendar, MapPin, Sparkles } from 'lucide-react';
 import heroBanner from '../assets/hero-banner.jpg';
+import ecellLogoOnly from '../assets/jnct-ecell-logo-only.png';
 
 export default function Hero({ onNavigate }) {
   const scrollToAbout = (e) => {
@@ -19,9 +19,15 @@ export default function Hero({ onNavigate }) {
       
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] items-center gap-12 relative z-10">
         <div className="flex flex-col items-start text-left">
-          <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/20 text-primary px-3.5 py-1.5 rounded-full text-[13px] font-semibold tracking-wide mb-6">
-            <Sparkles className="animate-pulse-sparkle text-primary" size={14} />
-            <span>India's Premier Entrepreneurship Summit</span>
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <div className="inline-flex items-center gap-2 bg-primary/8 border border-primary/20 text-primary px-3.5 py-1.5 rounded-full text-[13px] font-semibold tracking-wide">
+              <Sparkles className="animate-pulse-sparkle text-primary" size={14} />
+              <span>India's Premier Entrepreneurship Summit</span>
+            </div>
+            <div className="inline-flex items-center gap-2 bg-white/4 border border-white/10 px-3.5 py-1.5 rounded-full text-[13px] font-semibold text-text-primary">
+              <img src={ecellLogoOnly} alt="JNCT E-Cell" className="h-4.5 w-auto object-contain" />
+              <span>JNCT E-Cell</span>
+            </div>
           </div>
           
           <h1 className="font-heading font-extrabold text-5xl md:text-7xl leading-tight tracking-tight text-text-primary mb-3">
@@ -42,7 +48,7 @@ export default function Hero({ onNavigate }) {
             </div>
             <div className="flex items-center gap-2 text-sm font-medium text-text-primary">
               <MapPin className="text-primary" size={18} />
-              <span>National Innovation Center & Virtual</span>
+              <span>JNCT Campus, Bhopal & Virtual</span>
             </div>
           </div>
 

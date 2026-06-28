@@ -1,5 +1,6 @@
-import React from 'react';
 import { Target, Lightbulb, Users2, Award } from 'lucide-react';
+import jnctLogoWhite from '../assets/jnct-logo-white.png';
+import ecellLogoText from '../assets/jnct-ecell-logo-text.png';
 
 export default function About() {
   const stats = [
@@ -27,11 +28,18 @@ export default function About() {
         {/* About Info Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 mb-16">
           <div className="flex flex-col justify-center text-left">
+            {/* Branding Logos */}
+            <div className="flex flex-wrap items-center gap-5 mb-6 bg-white/2 border border-white/5 p-4 rounded-xl max-w-max">
+              <img src={jnctLogoWhite} alt="JNCT Bhopal Logo" className="h-10 w-auto object-contain" />
+              <div className="h-8 w-[1px] bg-border-color hidden sm:block"></div>
+              <img src={ecellLogoText} alt="JNCT E-Cell Logo" className="h-8 w-auto object-contain" />
+            </div>
+
             <h3 className="font-heading font-extrabold text-2xl md:text-3xl text-text-primary mb-5 tracking-tight">
               Empowering the Founders of Tomorrow
             </h3>
             <p className="text-base leading-relaxed mb-5 text-text-secondary">
-              Organized by the E-Cell, E-Summit is our flagship annual entrepreneurship festival. It serves as a hotbed for brilliant minds to showcase disruptive ideas, network with venture capitalists, and learn directly from industry titans.
+              Organized by the E-Cell of Jai Narain College of Technology (JNCT), Bhopal, E-Summit is our flagship annual entrepreneurship festival. It serves as a hotbed for brilliant minds to showcase disruptive ideas, network with venture capitalists, and learn directly from industry titans.
             </p>
             <p className="text-base leading-relaxed text-text-secondary">
               Whether you are an aspiring student founder looking to validate your first MVP, an engineer searching for co-founders, or an investor scouting high-potential early-stage companies, E-Summit '26 provides the perfect ecosystem.
