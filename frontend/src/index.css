@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #030712;
+  --color-bg-card: #0b1120;
+  --color-bg-card-hover: #151e33;
+  --color-primary: #06b6d4;
+  --color-secondary: #8b5cf6;
+  --color-accent: #ec4899;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-border-color: rgba(255, 255, 255, 0.08);
+  --color-border-color-hover: rgba(255, 255, 255, 0.16);
+  --color-glass-bg: rgba(3, 7, 18, 0.75);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  --animate-pulse-sparkle: pulse-sparkle 2s infinite ease-in-out;
+}
+
+@keyframes pulse-sparkle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    filter: drop-shadow(0 0 4px #06b6d4);
+  }
+}
+
+/* Custom styles for elements not easily covered by Tailwind classes or for layout standards */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+section {
+  scroll-margin-top: 80px; /* Offset for sticky navbar */
+}
